@@ -99,9 +99,13 @@ main {
   width: fit-content;
   font-size: var(--font-size-1_50x);
   line-height: var(--line-height-1_20x);
-  margin: 0;
-  margin-inline-start: calc(var(--spacing-4x) * -1);
+  
   margin-block-start: calc(var(--spacing-2x) * -1);
+  margin-inline-end: 0;
+  margin-block-end: var(--font-size-1_00x);
+  margin-inline-start: calc(var(--spacing-4x) * -1);
+  
+  
   padding: var(--spacing-2x) var(--spacing-4x);
   background-color: var(--color-gold-light);
   border-block-end: var(--spacing-1x) solid var(--color-gold-dark);

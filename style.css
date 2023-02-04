@@ -21,10 +21,18 @@ body {
   --spacing-8x: 128px;
 
   /* FONT */
-  --font-size-1x: 1rem;
-  --font-size-2x: 1.25rem;
-  --font-size-3x: 1.5rem;
-  --font-size-4x: 2rem;
+  --font-size-1_00x: 1rem;
+  --font-size-1_25x: 1.25rem;
+  --font-size-1_50x: 1.5rem;
+  --font-size-2_00x: 2rem;
+  --font-size-3_00x: 3rem;
+
+  /* LINE HEIGHT */
+  --line-height-1_00x: 1;
+  --line-height-1_20x: 1.2;
+  --line-height-1_50x: 1.5;
+  --line-height-2_00x: 2;
+  --line-height-3_00x: 3;
 
   /* COLOR PALETTE */
   --grayscale-black: hsl(0deg, 0%, 0%);
@@ -54,8 +62,21 @@ body {
   margin-block-end: var(--spacing-5x);
 }
 
+h1 {
+  margin: 0;
+  font-size: var(--font-size-2_00x);
+  line-height: var(--line-height-1_20x);
+}
+
 p {
-  font-size: var(--font-size-2x);
+  font-size: var(--font-size-1_25x);
+  line-height: var(--line-height-1_50x);
+  margin: 0;
+  margin-block-end: var(--font-size-1_00x);
+}
+
+p:last-child {
+  margin: 0;
 }
 
 strong {
@@ -65,7 +86,7 @@ strong {
 main {
   border-block-start: var(--spacing-1x) solid var(--grayscale-light);
   background-color: var(--grayscale-medium);
-  padding-block: var(--spacing-5x);
+  padding: var(--spacing-5x) 0;
 }
 
 .card {
@@ -74,16 +95,14 @@ main {
   border-block-end: var(--spacing-1x) solid var(--grayscale-light);
 }
 
-.card p:last-of-type {
-  margin: 0;
-}
-
 .indented-heading {
   width: fit-content;
-  border-block-end: var(--spacing-1x) solid var(--color-gold-dark);
+  font-size: var(--font-size-1_50x);
+  line-height: var(--line-height-1_20x);
+  margin: 0;
   margin-inline-start: calc(var(--spacing-4x) * -1);
   margin-block-start: calc(var(--spacing-2x) * -1);
+  padding: var(--spacing-2x) var(--spacing-4x);
   background-color: var(--color-gold-light);
-  padding-block: var(--spacing-2x);
-  padding-inline: var(--spacing-4x);
+  border-block-end: var(--spacing-1x) solid var(--color-gold-dark);
 }

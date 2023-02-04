@@ -9,4 +9,81 @@ body {
   padding: 0;
 }
 
-/* Add styles here! */
+:root {
+  /* SPACING */
+  --spacing-1x: 8px;
+  --spacing-2x: 16px;
+  --spacing-3x: 24px;
+  --spacing-4x: 32px;
+  --spacing-5x: 48px;
+  --spacing-6x: 64px;
+  --spacing-7x: 96px;
+  --spacing-8x: 128px;
+
+  /* FONT */
+  --font-size-1x: 1rem;
+  --font-size-2x: 1.25rem;
+  --font-size-3x: 1.5rem;
+  --font-size-4x: 2rem;
+
+  /* COLOR PALETTE */
+  --grayscale-black: hsl(0deg, 0%, 0%);
+  --grayscale-darkest: hsl(0deg, 0%, 10%);
+  --grayscale-dark: hsl(0deg, 0%, 30%);
+  --grayscale-medium: hsl(0deg, 0%, 40%);
+  --grayscale-light: hsl(0deg, 0%, 60%);
+  --grayscale-white: hsl(0deg, 0%, 100%);
+  --color-green: hsl(160deg, 100%, 30%);
+  --color-gold-light: hsl(45deg, 100%, 50%);
+  --color-gold-dark: hsl(45deg, 100%, 40%);
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.intro-chunk {
+  max-width: 450px;
+  margin-block-start: var(--spacing-7x);
+  margin-block-end: var(--spacing-6x);
+  padding-inline: var(--spacing-3x);
+}
+
+.title {
+  margin-block-end: var(--spacing-5x);
+}
+
+p {
+  font-size: var(--font-size-2x);
+}
+
+strong {
+  color: var(--color-green);
+}
+
+main {
+  border-block-start: var(--spacing-1x) solid var(--grayscale-light);
+  background-color: var(--grayscale-medium);
+  padding-block: var(--spacing-5x);
+}
+
+.card {
+  padding: var(--spacing-3x);
+  background-color: var(--grayscale-white);
+  border-block-end: var(--spacing-1x) solid var(--grayscale-light);
+}
+
+.card p:last-of-type {
+  margin: 0;
+}
+
+.indented-heading {
+  width: fit-content;
+  border-block-end: var(--spacing-1x) solid var(--color-gold-dark);
+  margin-inline-start: calc(var(--spacing-4x) * -1);
+  margin-block-start: calc(var(--spacing-2x) * -1);
+  background-color: var(--color-gold-light);
+  padding-block: var(--spacing-2x);
+  padding-inline: var(--spacing-4x);
+}
